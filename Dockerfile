@@ -36,6 +36,11 @@ RUN R -e "install.packages('rvg')"
 RUN R -e "install.packages('renv')"
 RUN R -e "install.packages('lubridate')"
 RUN R -e "install.packages('reshape2')"
+RUN R -e "install.packages('xgboost')"
+RUN R -e "install.packages('diffr')"
+RUN R -e "install.packages('meta')"
+RUN R -e "install.packages('flextable')"
+RUN R -e "install.packages('benchmarkme')"
 
 # install PLP Packages 
 RUN R -e 'devtools::install_github("OHDSI/OhdsiRTools",ref="v2.0.2")'
@@ -45,6 +50,9 @@ RUN R -e 'devtools::install_github("OHDSI/FeatureExtraction",ref="v3.2.0")'
 RUN R -e 'devtools::install_github("OHDSI/PatientLevelPrediction",ref="v5.0.5")'
 RUN R -e 'devtools::install_github("OHDSI/BigKnn",ref="v1.0.1")'
 RUN R -e 'devtools::install_github("OHDSI/Andromeda",ref="v0.6.1")'
+RUN R -e 'devtools::install_github("OHDSI/CohortDiagnostics",ref="v3.0.2")'
+RUN R -e 'devtools::install_github("OHDSI/CirceR",ref="v1.1.1")'
+RUN R -e 'devtools::install_github("OHDSI/ROhdsiWebApi",ref="v1.3.1")'
 
 # install PLE Packages
 RUN R -e 'devtools::install_github("OHDSI/CohortMethod",ref="v4.2.2")'
